@@ -1,5 +1,4 @@
 # FastAPI Employee Management API
-
 REST API built with FastAPI and Python for managing employee records.
 
 ## Features
