@@ -34,6 +34,9 @@ def create_employees(
 
     db.commit()
 
+    for employee in new_employees:
+        db.refresh(employee)
+
     return new_employees
 
 
@@ -69,16 +72,20 @@ def get_employees(
     # Choose sorting column
     if sort_by == "name":
         sort_column = Employee.name
+
     elif sort_by == "email":
         sort_column = Employee.email
+
     elif sort_by == "department":
         sort_column = Employee.department
+
     else:
         sort_column = Employee.id
 
     # Choose sorting order
     if order == "desc":
         sort_column = sort_column.desc()
+
     else:
         sort_column = sort_column.asc()
 
