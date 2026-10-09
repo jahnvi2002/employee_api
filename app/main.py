@@ -20,12 +20,12 @@ app.add_middleware(
         "http://localhost:5173",
         "https://jahnvi2002.github.io",
         "https://employee-api-frontend-1qf5ks9kv-jahnvi4.vercel.app",
+        "https://employee-api-frontend-abp9ntkeu-jahnvi4.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 
 # Include routers
